@@ -266,6 +266,7 @@ export function StepThree({
                 value={config.subtitle}
                 onChange={(v) => onChange("subtitle", v)}
                 placeholder="A short one-liner"
+                required
               />
               <FormField
                 label="Description"
@@ -273,6 +274,7 @@ export function StepThree({
                 value={config.description}
                 onChange={(v) => onChange("description", v)}
                 placeholder="What does your app do?"
+                required
               />
               <FormField
                 label="Tagline"
@@ -281,6 +283,7 @@ export function StepThree({
                 onChange={(v) => onChange("tagline", v)}
                 placeholder="Catchy tagline"
                 hint="E.g. Play instantly, Save instantly"
+                required
               />
             </div>
           </div>
@@ -297,6 +300,7 @@ export function StepThree({
                 onChange={(v) => onChange("appUrl", v)}
                 placeholder="https://your-app.vercel.app"
                 hint="Auto-filled from Step 1"
+                required
               />
               <FormField
                 label="Icon URL"
@@ -304,6 +308,7 @@ export function StepThree({
                 value={config.iconUrl}
                 onChange={(v) => onChange("iconUrl", v)}
                 placeholder="https://your-app.vercel.app/icon.png"
+                required
               />
               <FormField
                 label="Splash Image URL"
@@ -311,6 +316,7 @@ export function StepThree({
                 value={config.splashImageUrl}
                 onChange={(v) => onChange("splashImageUrl", v)}
                 placeholder="https://your-app.vercel.app/splash.png"
+                required
               />
               <FormField
                 label="Hero Image URL"
@@ -318,6 +324,7 @@ export function StepThree({
                 value={config.heroImageUrl}
                 onChange={(v) => onChange("heroImageUrl", v)}
                 placeholder="https://your-app.vercel.app/hero.png"
+                required
               />
               <FormField
                 label="Webhook URL"
@@ -325,6 +332,7 @@ export function StepThree({
                 value={config.webhookUrl}
                 onChange={(v) => onChange("webhookUrl", v)}
                 placeholder="https://your-app.vercel.app/api/webhook"
+                required
               />
             </div>
           </div>
@@ -372,6 +380,7 @@ export function StepThree({
                 onChange={(v) => onChange("ogTitle", v)}
                 placeholder={config.appName || "e.g. My Base App"}
                 hint="Auto-synced with App Name."
+                required
               />
               <FormField
                 label="OG Description"
@@ -380,6 +389,7 @@ export function StepThree({
                 onChange={(v) => onChange("ogDescription", v)}
                 placeholder={config.description || "e.g. A Base mini-app"}
                 hint="Auto-synced with Description."
+                required
               />
 
               <FormField
@@ -388,6 +398,7 @@ export function StepThree({
                 value={config.ogImageUrl}
                 onChange={(v) => onChange("ogImageUrl", v)}
                 placeholder="https://your-app.vercel.app/og.png"
+                required
               />
             </div>
           </div>
@@ -457,7 +468,7 @@ export function StepThree({
                       href="https://github.com/settings/tokens/new?scopes=repo"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-base-blue hover:underline"
+                      className="text-emerald-400 hover:underline"
                     >
                       Create a token here
                     </a>{" "}

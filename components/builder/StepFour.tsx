@@ -149,6 +149,14 @@ export function StepFour({ deployedUrl }: StepFourProps) {
             </code>{" "}
             matches exactly
           </li>
+          <li>
+            • <strong className="text-slate-300">Analytics not showing?</strong>{" "}
+            — Ensure{" "}
+            <code className="text-xs text-yellow-400">
+              NEXT_PUBLIC_BASE_APP_ID
+            </code>{" "}
+            are correct
+          </li>
         </ul>
       </div>
     </div>

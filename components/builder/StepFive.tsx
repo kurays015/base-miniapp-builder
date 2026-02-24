@@ -1,6 +1,7 @@
 "use client";
 
 import { ExternalLink, Rocket, Share2, Check } from "lucide-react";
+import Link from "next/link";
 
 interface StepFiveProps {
   deployedUrl: string;
@@ -88,11 +89,49 @@ export function StepFive({ deployedUrl, appName }: StepFiveProps) {
         </div>
       </div>
 
-      {/* Step 2: Publish */}
+      {/* Step 2: Analytics */}
       <div className="p-5 rounded-xl border border-base-border bg-base-card/50 space-y-3">
         <div className="flex items-center gap-2">
           <div className="w-6 h-6 rounded-full bg-base-blue/20 flex items-center justify-center text-xs font-bold text-base-blue">
             2
+          </div>
+          <p className="text-sm font-semibold text-slate-200">App Analytics</p>
+        </div>
+        <p className="text-sm text-base-muted ml-8">
+          Track your app's performance and engagement with Base Analytics. See
+          how users interact with your app and make improvements based on
+          real-time data.
+        </p>
+        <div className="ml-8 space-y-2 text-sm text-slate-300">
+          <ol className="list-decimal list-inside space-y-1.5 text-base-muted">
+            <li>
+              Get your base app id from{" "}
+              <Link
+                href="https://www.base.dev/apps/699dc33dc5c1c2a065a21d19?filters={%22timerange%22:%22ALL_TIME%22,%22collapsed%22:false,%22dataSource%22:%22base_app%22}&addAppUrl=true"
+                target="_blank"
+                className="text-emerald-400"
+              >
+                base.dev
+              </Link>{" "}
+              and login your base account
+            </li>
+            <li>
+              Go vercel settings &gt; environment variables and ensure the{" "}
+              <span className="font-semibold text-white">
+                NEXT_PUBLIC_BASE_APP_ID
+              </span>{" "}
+              are matched
+            </li>
+            <li>Now you can monitor your app's performance</li>
+          </ol>
+        </div>
+      </div>
+
+      {/* Step 3: Publish */}
+      <div className="p-5 rounded-xl border border-base-border bg-base-card/50 space-y-3">
+        <div className="flex items-center gap-2">
+          <div className="w-6 h-6 rounded-full bg-base-blue/20 flex items-center justify-center text-xs font-bold text-base-blue">
+            3
           </div>
           <p className="text-sm font-semibold text-slate-200">
             Make your app public on Base
@@ -100,7 +139,7 @@ export function StepFive({ deployedUrl, appName }: StepFiveProps) {
         </div>
         <p className="text-sm text-base-muted ml-8">
           Share your mini-app link{" "}
-          <code className="text-base-blue text-xs">
+          <code className="text-emerald-400 text-xs">
             {deployedUrl || "https://your-app.vercel.app"}
           </code>{" "}
           on the <strong className="text-white">Base app</strong> to make it
@@ -124,19 +163,6 @@ export function StepFive({ deployedUrl, appName }: StepFiveProps) {
               with it
             </li>
           </ol>
-        </div>
-        <div className="ml-8">
-          <a
-            href="https://www.base.org"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-base-border
-              hover:border-white/20 text-white text-sm font-semibold transition-all hover:-translate-y-0.5"
-          >
-            <Share2 className="w-4 h-4" />
-            Open Base App
-            <ExternalLink className="w-3.5 h-3.5 opacity-50" />
-          </a>
         </div>
       </div>
 

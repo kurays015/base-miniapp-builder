@@ -11,15 +11,15 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { FormField } from "@/components/ui/FormField";
+import Link from "next/link";
 
 interface StepOneProps {
   deployedUrl: string;
   onDeployedUrlChange: (url: string) => void;
 }
 
-const TEMPLATE_REPO = "https://github.com/kurays015/baseminiapp-template";
 const VERCEL_DEPLOY_URL =
-  "https://vercel.com/new/clone?repository-url=https://github.com/kurays015/baseminiapp-template&env=NEXT_PUBLIC_ROOT_URL&envDescription=The+live+URL+of+your+deployed+app&envLink=https://vercel.com/docs/environment-variables";
+  "https://vercel.com/new/clone?repository-url=https://github.com/kurays015/baseminiapp-template&env=NEXT_PUBLIC_ROOT_URL&env=NEXT_PUBLIC_BASE_APP_ID&envDescription=The+live+URL+of+your+deployed+app&envLink=https://vercel.com/docs/environment-variables";
 
 function CopyableCode({ code }: { code: string }) {
   const [copied, setCopied] = useState(false);
@@ -61,44 +61,11 @@ export function StepOne({ deployedUrl, onDeployedUrlChange }: StepOneProps) {
 
       {/* Sub-steps */}
       <div className="space-y-4">
-        {/* 1A: Fork on GitHub */}
+        {/* 1A: Deploy to Vercel */}
         <div className="p-5 rounded-xl border border-base-border bg-base-card/50 space-y-3">
           <div className="flex items-center gap-2">
             <div className="w-6 h-6 rounded-full bg-base-blue/20 flex items-center justify-center text-xs font-bold text-base-blue">
-              A
-            </div>
-            <p className="text-sm font-semibold text-slate-200">
-              Fork the template on GitHub
-            </p>
-          </div>
-          <p className="text-sm text-base-muted ml-8">
-            Click below to open the template repository, then click{" "}
-            <strong className="text-white">Fork</strong> to add it to your
-            GitHub account. This gives you your own copy to customize.
-          </p>
-          <div className="ml-8">
-            <CopyableCode code={TEMPLATE_REPO} />
-          </div>
-          <div className="ml-8">
-            <a
-              href={TEMPLATE_REPO}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-base-border
-                hover:border-white/20 text-sm font-semibold text-white transition-all hover:-translate-y-0.5"
-            >
-              <Github className="w-4 h-4" />
-              Open Template on GitHub
-              <ExternalLink className="w-3.5 h-3.5 opacity-50" />
-            </a>
-          </div>
-        </div>
-
-        {/* 1B: Deploy to Vercel */}
-        <div className="p-5 rounded-xl border border-base-border bg-base-card/50 space-y-3">
-          <div className="flex items-center gap-2">
-            <div className="w-6 h-6 rounded-full bg-base-blue/20 flex items-center justify-center text-xs font-bold text-base-blue">
-              B
+              1
             </div>
             <p className="text-sm font-semibold text-slate-200">
               Deploy to Vercel
@@ -124,12 +91,33 @@ export function StepOne({ deployedUrl, onDeployedUrlChange }: StepOneProps) {
                     your-live-project-domain
                   </span>
                 </div>
+                <div className="flex gap-2 items-center font-mono text-xs">
+                  <span className="text-yellow-400">
+                    NEXT_PUBLIC_BASE_APP_ID
+                  </span>
+                  <span className="text-base-muted">=</span>
+                  <span className="text-emerald-400">your-base-app-id </span>
+                </div>
                 <p className="text-base-muted text-xs">
                   Set this to your Vercel deployment URL{" "}
-                  <em>(you can update it after the first deploy)</em>. Example:{" "}
+                  <em>
+                    (you can update it on vercel settings &gt; environment
+                    variables after the first deploy)
+                  </em>
+                  . Example:{" "}
                   <code className="text-emerald-400">
                     https://my-app.vercel.app
                   </code>
+                </p>
+                <p className="text-base-muted text-xs">
+                  Get your base app id{" "}
+                  <Link
+                    className="text-emerald-400"
+                    href="https://www.base.dev/apps/699dc33dc5c1c2a065a21d19?filters={%22timerange%22:%22ALL_TIME%22,%22collapsed%22:false,%22dataSource%22:%22base_app%22}&addAppUrl=true"
+                    target="_blank"
+                  >
+                    here
+                  </Link>
                 </p>
               </div>
             </div>
@@ -152,11 +140,11 @@ export function StepOne({ deployedUrl, onDeployedUrlChange }: StepOneProps) {
           </div>
         </div>
 
-        {/* 1C: Get deployed URL */}
+        {/* 1B: Get deployed URL */}
         <div className="p-5 rounded-xl border border-base-border bg-base-card/50 space-y-3">
           <div className="flex items-center gap-2">
             <div className="w-6 h-6 rounded-full bg-base-blue/20 flex items-center justify-center text-xs font-bold text-base-blue">
-              C
+              2
             </div>
             <p className="text-sm font-semibold text-slate-200">
               Save your deployed app URL
@@ -165,7 +153,7 @@ export function StepOne({ deployedUrl, onDeployedUrlChange }: StepOneProps) {
           <p className="text-sm text-base-muted ml-8">
             After Vercel finishes deploying, copy your live URL from the Vercel
             dashboard (e.g.{" "}
-            <code className="text-base-blue text-xs">
+            <code className="text-emerald-400 text-xs">
               https://my-app.vercel.app
             </code>
             ) and paste it here. You&apos;ll need this in the next steps.
