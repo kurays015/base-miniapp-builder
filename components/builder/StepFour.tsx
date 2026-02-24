@@ -1,6 +1,7 @@
 "use client";
 
 import { ExternalLink, CheckSquare, Info } from "lucide-react";
+import Link from "next/link";
 
 interface StepFourProps {
   deployedUrl: string;
@@ -62,16 +63,16 @@ export function StepFour({ deployedUrl }: StepFourProps) {
               Check Account Association tab
             </p>
           </div>
-          <a
+          <Link
             href={accountUrl}
             target="_blank"
-            rel="noopener noreferrer"
+            referrerPolicy="no-referrer"
             className="flex items-center gap-2 px-4 py-2 rounded-lg bg-base-blue hover:bg-blue-600
               text-white text-xs font-bold transition-all"
           >
             Open Tab
             <ExternalLink className="w-3.5 h-3.5" />
-          </a>
+          </Link>
         </div>
         <p className="text-sm text-base-muted ml-4 sm:ml-8">
           Confirm all these fields are now showing correctly:
@@ -100,16 +101,16 @@ export function StepFour({ deployedUrl }: StepFourProps) {
               Check Metadata tab
             </p>
           </div>
-          <a
+          <Link
             href={metadataUrl}
             target="_blank"
-            rel="noopener noreferrer"
+            referrerPolicy="no-referrer"
             className="flex items-center gap-2 px-4 py-2 rounded-lg bg-base-blue hover:bg-blue-600
               text-white text-xs font-bold transition-all"
           >
             Open Tab
             <ExternalLink className="w-3.5 h-3.5" />
-          </a>
+          </Link>
         </div>
         <p className="text-sm text-base-muted ml-4 sm:ml-8">
           Verify the following metadata fields are shown:

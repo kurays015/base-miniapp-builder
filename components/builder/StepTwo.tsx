@@ -2,6 +2,7 @@
 
 import { ExternalLink, Info, Shield } from "lucide-react";
 import { FormField } from "@/components/ui/FormField";
+import Link from "next/link";
 
 interface StepTwoProps {
   deployedUrl: string;
@@ -66,16 +67,16 @@ export function StepTwo({
             <strong className="text-white">Account Association</strong> tab.
           </p>
           <div className="ml-4 sm:ml-8">
-            <a
+            <Link
               href={previewUrl}
               target="_blank"
-              rel="noopener noreferrer"
+              referrerPolicy="no-referrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-base-blue hover:bg-blue-600
                 text-white text-sm font-bold transition-all hover:shadow-lg hover:shadow-base-blue/30 hover:-translate-y-0.5"
             >
               Open Base Preview
               <ExternalLink className="w-4 h-4" />
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -93,7 +94,7 @@ export function StepTwo({
             <ol className="list-decimal list-inside space-y-1 text-slate-300">
               <li>
                 Paste your deployed URL:{" "}
-                <code className="text-base-blue text-xs">
+                <code className="text-emerald-400 text-xs">
                   {deployedUrl || "https://your-app.vercel.app"}
                 </code>
               </li>

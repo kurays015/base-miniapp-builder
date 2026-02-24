@@ -60,17 +60,17 @@ export function StepFive({ deployedUrl, appName }: StepFiveProps) {
           errors.
         </p>
         <div className="ml-4 sm:ml-8">
-          <a
+          <Link
             href={previewUrl}
             target="_blank"
-            rel="noopener noreferrer"
+            referrerPolicy="no-referrer"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-base-blue hover:bg-blue-600
               text-white text-sm font-bold transition-all hover:shadow-lg hover:shadow-base-blue/30 hover:-translate-y-0.5"
           >
             <Rocket className="w-4 h-4" />
             Preview on base.dev
             <ExternalLink className="w-3.5 h-3.5" />
-          </a>
+          </Link>
         </div>
 
         <div className="ml-4 sm:ml-8 p-3 rounded-lg bg-[#060c1a] border border-base-border text-xs text-base-muted space-y-1">

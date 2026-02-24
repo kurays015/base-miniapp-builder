@@ -14,6 +14,7 @@ import {
   AlertCircle,
   Info,
 } from "lucide-react";
+import Link from "next/link";
 
 interface StepThreeProps {
   config: MiniAppConfig;
@@ -466,14 +467,14 @@ export function StepThree({
                       transition-colors hover:border-base-border/80 font-mono"
                   />
                   <p className="text-xs text-base-muted">
-                    <a
+                    <Link
                       href="https://github.com/settings/tokens/new?scopes=repo"
                       target="_blank"
-                      rel="noopener noreferrer"
+                      referrerPolicy="no-referrer"
                       className="text-emerald-400 hover:underline"
                     >
                       Create a token here
-                    </a>{" "}
+                    </Link>{" "}
                     with <code className="text-xs">repo</code> scope. It is
                     never stored.
                   </p>

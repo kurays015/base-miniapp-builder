@@ -92,22 +92,22 @@ export default function Home() {
             </span>
           </div>
           <div className="flex items-center gap-2 sm:gap-4">
-            <a
+            <Link
               href="https://docs.base.org/builderkits/minikit/overview"
               target="_blank"
-              rel="noopener noreferrer"
+              referrerPolicy="no-referrer"
               className="hidden sm:block text-sm text-base-muted hover:text-white transition-colors"
             >
               Docs
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://www.base.dev/preview?tab=account"
               target="_blank"
-              rel="noopener noreferrer"
+              referrerPolicy="no-referrer"
               className="hidden sm:block text-sm text-base-muted hover:text-white transition-colors"
             >
               Preview Tool
-            </a>
+            </Link>
             <Link
               href="/builder"
               className="px-3 sm:px-4 py-2 bg-base-blue hover:bg-blue-600 rounded-lg text-sm font-semibold transition-all hover:shadow-lg hover:shadow-base-blue/30 hover:-translate-y-0.5"
@@ -145,15 +145,15 @@ export default function Home() {
               Start Building Now
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <a
+            <Link
               href="https://github.com/coinbase/build-onchain-apps"
               target="_blank"
-              rel="noopener noreferrer"
+              referrerPolicy="no-referrer"
               className="flex items-center gap-2 px-8 py-4 rounded-xl border border-base-border hover:border-base-blue/50 text-base-muted hover:text-white transition-all text-base font-semibold hover:-translate-y-1"
             >
               <Code2 className="w-5 h-5" />
               View Templates
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -226,23 +226,32 @@ export default function Home() {
         <footer className="mt-16 text-center text-base-muted text-sm">
           <p>
             Built for the Base ecosystem •{" "}
-            <a
+            <Link
               href="https://docs.base.org"
               target="_blank"
-              rel="noopener noreferrer"
+              referrerPolicy="no-referrer"
               className="text-base-blue hover:text-white transition-colors"
             >
               Base Docs
-            </a>{" "}
+            </Link>{" "}
             •{" "}
-            <a
+            <Link
               href="https://www.base.dev/preview"
               target="_blank"
-              rel="noopener noreferrer"
+              referrerPolicy="no-referrer"
               className="text-base-blue hover:text-white transition-colors"
             >
               Preview Tool
-            </a>
+            </Link>{" "}
+            • <span className="text-xs">By: </span>
+            <Link
+              href="https://x.com/constkurays"
+              target="_blank"
+              referrerPolicy="no-referrer"
+              className="text-base-blue hover:text-white transition-colors"
+            >
+              @constkurays
+            </Link>
           </p>
         </footer>
       </div>

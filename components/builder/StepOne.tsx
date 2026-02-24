@@ -115,6 +115,7 @@ export function StepOne({ deployedUrl, onDeployedUrlChange }: StepOneProps) {
                     className="text-emerald-400"
                     href="https://www.base.dev/apps/699dc33dc5c1c2a065a21d19?filters={%22timerange%22:%22ALL_TIME%22,%22collapsed%22:false,%22dataSource%22:%22base_app%22}&addAppUrl=true"
                     target="_blank"
+                    referrerPolicy="no-referrer"
                   >
                     here
                   </Link>
@@ -124,10 +125,10 @@ export function StepOne({ deployedUrl, onDeployedUrlChange }: StepOneProps) {
           </div>
 
           <div className="ml-4 sm:ml-8">
-            <a
+            <Link
               href={VERCEL_DEPLOY_URL}
               target="_blank"
-              rel="noopener noreferrer"
+              referrerPolicy="no-referrer"
               className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-xl bg-black border border-white/10
                 hover:bg-white/10 text-white text-sm font-bold transition-all hover:shadow-lg hover:-translate-y-0.5"
             >
@@ -136,7 +137,7 @@ export function StepOne({ deployedUrl, onDeployedUrlChange }: StepOneProps) {
               </svg>
               Deploy to Vercel
               <ExternalLink className="w-3.5 h-3.5 opacity-50" />
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -198,14 +199,14 @@ export function StepOne({ deployedUrl, onDeployedUrlChange }: StepOneProps) {
           <Check className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
           <div className="text-sm">
             <p className="font-semibold text-emerald-300">App URL saved!</p>
-            <a
+            <Link
               href={deployedUrl}
               target="_blank"
-              rel="noopener noreferrer"
+              referrerPolicy="no-referrer"
               className="text-base-muted hover:text-white transition-colors break-all"
             >
               {deployedUrl} <ExternalLink className="w-3 h-3 inline ml-1" />
-            </a>
+            </Link>
           </div>
         </div>
       )}
