@@ -53,13 +53,13 @@ export function StepFive({ deployedUrl, appName }: StepFiveProps) {
             Test your app in the Base Preview
           </p>
         </div>
-        <p className="text-sm text-base-muted ml-8">
+        <p className="text-sm text-base-muted ml-4 sm:ml-8">
           Use the Base Preview tool to see exactly how your mini-app looks and
           behaves inside the Base App. Check the{" "}
           <strong className="text-white">Console</strong> tab for any runtime
           errors.
         </p>
-        <div className="ml-8">
+        <div className="ml-4 sm:ml-8">
           <a
             href={previewUrl}
             target="_blank"
@@ -73,7 +73,7 @@ export function StepFive({ deployedUrl, appName }: StepFiveProps) {
           </a>
         </div>
 
-        <div className="ml-8 p-3 rounded-lg bg-[#060c1a] border border-base-border text-xs text-base-muted space-y-1">
+        <div className="ml-4 sm:ml-8 p-3 rounded-lg bg-[#060c1a] border border-base-border text-xs text-base-muted space-y-1">
           <p className="font-semibold text-slate-300">
             What to check in the preview:
           </p>
@@ -97,12 +97,12 @@ export function StepFive({ deployedUrl, appName }: StepFiveProps) {
           </div>
           <p className="text-sm font-semibold text-slate-200">App Analytics</p>
         </div>
-        <p className="text-sm text-base-muted ml-8">
-          Track your app's performance and engagement with Base Analytics. See
-          how users interact with your app and make improvements based on
+        <p className="text-sm text-base-muted ml-4 sm:ml-8">
+          Track your app&apos;s performance and engagement with Base Analytics.
+          See how users interact with your app and make improvements based on
           real-time data.
         </p>
-        <div className="ml-8 space-y-2 text-sm text-slate-300">
+        <div className="ml-4 sm:ml-8 space-y-2 text-sm text-slate-300">
           <ol className="list-decimal list-inside space-y-1.5 text-base-muted">
             <li>
               Get your base app id from{" "}
@@ -122,7 +122,7 @@ export function StepFive({ deployedUrl, appName }: StepFiveProps) {
               </span>{" "}
               are matched
             </li>
-            <li>Now you can monitor your app's performance</li>
+            <li>Now you can monitor your app&apos;s performance</li>
           </ol>
         </div>
       </div>
@@ -137,7 +137,7 @@ export function StepFive({ deployedUrl, appName }: StepFiveProps) {
             Make your app public on Base
           </p>
         </div>
-        <p className="text-sm text-base-muted ml-8">
+        <p className="text-sm text-base-muted ml-4 sm:ml-8">
           Share your mini-app link{" "}
           <code className="text-emerald-400 text-xs">
             {deployedUrl || "https://your-app.vercel.app"}
@@ -145,7 +145,7 @@ export function StepFive({ deployedUrl, appName }: StepFiveProps) {
           on the <strong className="text-white">Base app</strong> to make it
           searchable and visible to users.
         </p>
-        <div className="ml-8 space-y-2 text-sm text-slate-300">
+        <div className="ml-4 sm:ml-8 space-y-2 text-sm text-slate-300">
           <ol className="list-decimal list-inside space-y-1.5 text-base-muted">
             <li>
               Open the <strong className="text-white">Base App</strong> on your

@@ -80,9 +80,9 @@ export default function Home() {
       {/* Top glow */}
       <div className="fixed top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] rounded-full bg-base-blue/10 blur-[120px] pointer-events-none" />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-12">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
         {/* Nav */}
-        <nav className="flex items-center justify-between mb-20">
+        <nav className="flex items-center justify-between mb-10 sm:mb-20">
           <div className="flex items-center gap-3">
             <div className="w-9 h-9 rounded-xl bg-base-blue flex items-center justify-center">
               <Rocket className="w-5 h-5 text-white" />
@@ -91,12 +91,12 @@ export default function Home() {
               Base Builder
             </span>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 sm:gap-4">
             <a
               href="https://docs.base.org/builderkits/minikit/overview"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-base-muted hover:text-white transition-colors"
+              className="hidden sm:block text-sm text-base-muted hover:text-white transition-colors"
             >
               Docs
             </a>
@@ -104,13 +104,13 @@ export default function Home() {
               href="https://www.base.dev/preview?tab=account"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-base-muted hover:text-white transition-colors"
+              className="hidden sm:block text-sm text-base-muted hover:text-white transition-colors"
             >
               Preview Tool
             </a>
             <Link
               href="/builder"
-              className="px-4 py-2 bg-base-blue hover:bg-blue-600 rounded-lg text-sm font-semibold transition-all hover:shadow-lg hover:shadow-base-blue/30 hover:-translate-y-0.5"
+              className="px-3 sm:px-4 py-2 bg-base-blue hover:bg-blue-600 rounded-lg text-sm font-semibold transition-all hover:shadow-lg hover:shadow-base-blue/30 hover:-translate-y-0.5"
             >
               Start Building
             </Link>
@@ -118,7 +118,7 @@ export default function Home() {
         </nav>
 
         {/* Hero */}
-        <div className="text-center mb-24 animate-fade-in">
+        <div className="text-center mb-12 sm:mb-24 animate-fade-in">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-base-border bg-base-card text-xs text-base-muted mb-8">
             <span className="w-2 h-2 rounded-full bg-base-blue animate-pulse" />
             Built for Base Mini-App developers
@@ -158,7 +158,7 @@ export default function Home() {
         </div>
 
         {/* Feature pills */}
-        <div className="flex flex-wrap justify-center gap-3 mb-24 animate-slide-up">
+        <div className="flex flex-wrap justify-center gap-3 mb-12 sm:mb-24 animate-slide-up">
           {FEATURES.map((f) => (
             <div
               key={f.label}
@@ -171,12 +171,14 @@ export default function Home() {
         </div>
 
         {/* Steps */}
-        <div className="mb-24">
-          <h2 className="text-3xl font-bold text-center mb-3">How it works</h2>
-          <p className="text-base-muted text-center mb-12">
+        <div className="mb-12 sm:mb-24">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-3">
+            How it works
+          </h2>
+          <p className="text-base-muted text-center mb-8 sm:mb-12">
             Four steps to a production-ready Base mini-app
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
             {STEPS.map((step, i) => (
               <div
                 key={step.number}
@@ -199,14 +201,14 @@ export default function Home() {
         </div>
 
         {/* CTA Banner */}
-        <div className="relative rounded-3xl border border-base-border bg-base-card p-12 text-center overflow-hidden">
+        <div className="relative rounded-3xl border border-base-border bg-base-card p-6 sm:p-12 text-center overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-base-blue/5 to-transparent pointer-events-none" />
           <div className="absolute top-0 right-0 w-64 h-64 bg-base-blue/10 rounded-full blur-3xl pointer-events-none" />
           <div className="relative z-10">
-            <h2 className="text-4xl font-extrabold mb-4">
+            <h2 className="text-2xl sm:text-4xl font-extrabold mb-4">
               Ready to build your mini-app?
             </h2>
-            <p className="text-base-muted mb-8 text-lg">
+            <p className="text-base-muted mb-6 sm:mb-8 text-base sm:text-lg">
               Follow the guided wizard and have your Base mini-app live in under
               10 minutes.
             </p>

@@ -348,6 +348,7 @@ export function StepThree({
                 value={config.splashBackgroundColor}
                 onChange={(v) => onChange("splashBackgroundColor", v)}
                 type="color"
+                required
               />
               <SelectField
                 label="Primary Category"
@@ -363,6 +364,7 @@ export function StepThree({
                 onChange={(v) => onChange("tags", v)}
                 placeholder="base, miniapp, defi"
                 hint="Comma-separated. e.g. example, miniapp, baseapp, finance, marketing, ads, quickstart, waitlist, basecamp"
+                required
               />
             </div>
           </div>

@@ -71,13 +71,13 @@ export function StepOne({ deployedUrl, onDeployedUrlChange }: StepOneProps) {
               Deploy to Vercel
             </p>
           </div>
-          <p className="text-sm text-base-muted ml-8">
+          <p className="text-sm text-base-muted ml-4 sm:ml-8">
             Click the button below to instantly deploy the template. Vercel will
             prompt you to set up the required environment variable.
           </p>
 
           {/* Env var callout */}
-          <div className="ml-8 flex gap-3 p-4 rounded-xl border border-yellow-500/20 bg-yellow-500/5">
+          <div className="ml-4 sm:ml-8 flex gap-3 p-4 rounded-xl border border-yellow-500/20 bg-yellow-500/5">
             <Info className="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5" />
             <div className="text-sm">
               <p className="font-semibold text-yellow-300 mb-2">
@@ -123,7 +123,7 @@ export function StepOne({ deployedUrl, onDeployedUrlChange }: StepOneProps) {
             </div>
           </div>
 
-          <div className="ml-8">
+          <div className="ml-4 sm:ml-8">
             <a
               href={VERCEL_DEPLOY_URL}
               target="_blank"
@@ -150,7 +150,7 @@ export function StepOne({ deployedUrl, onDeployedUrlChange }: StepOneProps) {
               Save your deployed app URL
             </p>
           </div>
-          <p className="text-sm text-base-muted ml-8">
+          <p className="text-sm text-base-muted ml-4 sm:ml-8">
             After Vercel finishes deploying, copy your live URL from the Vercel
             dashboard (e.g.{" "}
             <code className="text-emerald-400 text-xs">
@@ -158,7 +158,7 @@ export function StepOne({ deployedUrl, onDeployedUrlChange }: StepOneProps) {
             </code>
             ) and paste it here. You&apos;ll need this in the next steps.
           </p>
-          <div className="ml-8">
+          <div className="ml-4 sm:ml-8">
             <FormField
               label="Deployed App URL"
               id="deployedUrl"
@@ -177,7 +177,7 @@ export function StepOne({ deployedUrl, onDeployedUrlChange }: StepOneProps) {
           </div>
 
           {/* How to find it */}
-          <div className="ml-8 flex gap-3 p-3 rounded-lg border border-base-border bg-[#060c1a]">
+          <div className="ml-4 sm:ml-8 flex gap-3 p-3 rounded-lg border border-base-border bg-[#060c1a]">
             <Terminal className="w-4 h-4 text-base-muted flex-shrink-0 mt-0.5" />
             <div className="text-xs text-base-muted space-y-1">
               <p className="font-semibold text-slate-300">

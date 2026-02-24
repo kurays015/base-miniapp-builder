@@ -53,7 +53,7 @@ export function StepFour({ deployedUrl }: StepFourProps) {
 
       {/* Account tab */}
       <div className="p-5 rounded-xl border border-base-border bg-base-card/50 space-y-4">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-wrap items-center justify-between gap-3">
           <div className="flex items-center gap-2">
             <div className="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center text-xs font-bold text-emerald-400">
               1
@@ -73,10 +73,10 @@ export function StepFour({ deployedUrl }: StepFourProps) {
             <ExternalLink className="w-3.5 h-3.5" />
           </a>
         </div>
-        <p className="text-sm text-base-muted ml-8">
+        <p className="text-sm text-base-muted ml-4 sm:ml-8">
           Confirm all these fields are now showing correctly:
         </p>
-        <ul className="ml-8 space-y-2">
+        <ul className="ml-4 sm:ml-8 space-y-2">
           {ACCOUNT_CHECKS.map((check) => (
             <li
               key={check}
@@ -91,7 +91,7 @@ export function StepFour({ deployedUrl }: StepFourProps) {
 
       {/* Metadata tab */}
       <div className="p-5 rounded-xl border border-base-border bg-base-card/50 space-y-4">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-wrap items-center justify-between gap-3">
           <div className="flex items-center gap-2">
             <div className="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center text-xs font-bold text-emerald-400">
               2
@@ -111,10 +111,10 @@ export function StepFour({ deployedUrl }: StepFourProps) {
             <ExternalLink className="w-3.5 h-3.5" />
           </a>
         </div>
-        <p className="text-sm text-base-muted ml-8">
+        <p className="text-sm text-base-muted ml-4 sm:ml-8">
           Verify the following metadata fields are shown:
         </p>
-        <ul className="ml-8 space-y-2">
+        <ul className="ml-4 sm:ml-8 space-y-2">
           {METADATA_CHECKS.map((check) => (
             <li
               key={check}

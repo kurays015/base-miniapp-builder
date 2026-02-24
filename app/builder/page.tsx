@@ -135,7 +135,7 @@ export default function BuilderPage() {
 
       {/* Header */}
       <header className="relative z-10 border-b border-base-border bg-base-dark/80 backdrop-blur-sm sticky top-0">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <Link
               href="/"
@@ -177,7 +177,7 @@ export default function BuilderPage() {
       </header>
 
       {/* Main content */}
-      <div className="relative z-10 flex flex-1 max-w-7xl mx-auto w-full px-6 py-8 gap-8">
+      <div className="relative z-10 flex flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 py-4 sm:py-8 gap-6 lg:gap-8">
         {/* Sidebar */}
         <aside className="hidden lg:block w-64 flex-shrink-0">
           <div className="sticky top-24">
@@ -220,7 +220,7 @@ export default function BuilderPage() {
 
         {/* Content */}
         <main className="flex-1 min-w-0">
-          <div className="bg-base-card border border-base-border rounded-2xl p-6 md:p-8 min-h-[600px] flex flex-col">
+          <div className="bg-base-card border border-base-border rounded-2xl p-4 sm:p-6 md:p-8 min-h-[600px] flex flex-col">
             <div className="flex-1">
               {currentStep === 1 && (
                 <StepOne

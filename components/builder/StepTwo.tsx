@@ -61,11 +61,11 @@ export function StepTwo({
               Open Base Preview Tool
             </p>
           </div>
-          <p className="text-sm text-base-muted ml-8">
+          <p className="text-sm text-base-muted ml-4 sm:ml-8">
             Click the button below to open the Base Developer Preview with the{" "}
             <strong className="text-white">Account Association</strong> tab.
           </p>
-          <div className="ml-8">
+          <div className="ml-4 sm:ml-8">
             <a
               href={previewUrl}
               target="_blank"
@@ -88,7 +88,7 @@ export function StepTwo({
               Paste your deployed URL and verify
             </p>
           </div>
-          <div className="ml-8 space-y-2 text-sm text-base-muted">
+          <div className="ml-4 sm:ml-8 space-y-2 text-sm text-base-muted">
             <p>In the Base Preview tool:</p>
             <ol className="list-decimal list-inside space-y-1 text-slate-300">
               <li>
@@ -118,11 +118,11 @@ export function StepTwo({
               Copy the association values
             </p>
           </div>
-          <p className="text-sm text-base-muted ml-8">
+          <p className="text-sm text-base-muted ml-4 sm:ml-8">
             After verification succeeds, Base will show you three values. Paste
             them below.
           </p>
-          <div className="ml-8 space-y-3">
+          <div className="ml-4 sm:ml-8 space-y-3">
             <FormField
               label="header"
               id="assoc-header"
