@@ -37,7 +37,7 @@ export const defaultConfig: MiniAppConfig = {
 export const PRIMARY_CATEGORIES = [
   "social",
   "defi",
-  "gaming",
+  "games",
   "nft",
   "utility",
   "developer-tools",
